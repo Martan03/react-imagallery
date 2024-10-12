@@ -1,0 +1,30 @@
+.overview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 5px 10px;
+}
+
+.overview > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.overview > div > svg {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.overview > button {
+    background-color: #00000000;
+    border: none;
+    cursor: pointer;
+}
+
+.overview > button > svg {
+    width: 15px;
+    height: 15px;
+}

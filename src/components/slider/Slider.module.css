@@ -1,0 +1,51 @@
+.sliderWrapper {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.leftArrow,
+.rightArrow {
+    width: 36px;
+    padding: 0 5px;
+    cursor: pointer;
+    transition: .3s;
+    user-select: none;
+    transform-origin: center;
+}
+
+.leftArrow {
+    transform: rotateZ(90deg);
+}
+
+.leftArrow:hover {
+    transform: translateX(-3px) rotateZ(90deg);
+}
+
+.rightArrow {
+    transform: rotateZ(-90deg);
+}
+
+.rightArrow:hover {
+    transform: translateX(3px) rotateZ(-90deg);
+}
+
+.sliderWrapper > .slider {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: scroll;
+    position: relative;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+}
+
+.sliderWrapper > .slider::-webkit-scrollbar {
+    display: none;
+}

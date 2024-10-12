@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
-import "./Slider.module.css";
+import styles from "./Slider.module.css";
 import { SliderProps } from "./Slider.types";
+
+import Arrow from '../../icons/arrow.svg';
 
 const Slider: React.FC<SliderProps> = ({children}) => {
     const sliderRef = useRef<HTMLDivElement>(null);
@@ -16,22 +18,12 @@ const Slider: React.FC<SliderProps> = ({children}) => {
     }
 
     return (
-        <div className="rig-slider-wrapper">
-            <img
-                className="rig-slider-arrow-left"
-                onClick={() => scroll(-1)}
-                alt="left arrow"
-                src="/icons/expand-arrow.svg"
-            />
-            <div className="rig-slider" ref={sliderRef}>
+        <div className={styles.sliderWrapper}>
+            <Arrow className={styles.leftArrow} onClick={() => scroll(-1)} />
+            <div className={styles.slider} ref={sliderRef}>
                 {children}
             </div>
-            <img
-                className="rig-slider-arrow-right"
-                onClick={() => scroll(1)}
-                alt="right arrow"
-                src="/icons/expand-arrow.svg"
-            />
+            <Arrow className={styles.rightArrow} onClick={() => scroll(1)} />
         </div>
     );
 };
