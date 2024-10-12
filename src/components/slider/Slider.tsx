@@ -1,8 +1,6 @@
-import React, { ReactNode, useRef } from "react";
-
-type SliderProps = {
-    children?: ReactNode,
-};
+import React, { useRef } from "react";
+import "./Slider.module.css";
+import { SliderProps } from "./Slider.types";
 
 const Slider: React.FC<SliderProps> = ({children}) => {
     const sliderRef = useRef<HTMLDivElement>(null);
