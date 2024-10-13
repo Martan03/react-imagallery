@@ -1,5 +1,7 @@
-import { ReactNode } from "react";
+import { ImgGalleryItem } from "../img_gallery/ImgGallery.types";
 
 export interface SliderProps {
-    children?: ReactNode,
+    items: ImgGalleryItem[],
+    sel: number,
+    setSel: React.Dispatch<React.SetStateAction<number>>,
 };

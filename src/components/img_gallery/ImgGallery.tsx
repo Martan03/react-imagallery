@@ -1,20 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./ImgGallery.module.css";
-import { ImgGalleryItem, ImgGalleryProps } from "./ImgGallery.types";
+import { ImgGalleryProps } from "./ImgGallery.types";
 import Slider from "../slider/Slider";
-import Thumbnail from "../thumbnail/Thumbnail";
 import Controls from "../controls/Controls";
-
-const Original: React.FC<{img?: ImgGalleryItem}> = ({img}) => {
-    return (
-        <div className={styles.original}>
-            <img
-                src={img?.original}
-                alt={img?.originalAlt ?? 'original image'}
-            />
-        </div>
-    )
-};
+import Original from "../original/Original";
 
 const ImgGallery: React.FC<ImgGalleryProps> = (props) => {
     const [sel, setSel] = useState<number>(props.selected ?? 0);
@@ -87,18 +76,16 @@ const ImgGallery: React.FC<ImgGalleryProps> = (props) => {
                     onClose={props.onClose ?? (() => {})}
                 />
             ) : ''}
-            <Original img={props.items[sel]} />
+            <Original
+                items={props.items}
+                sel={sel}
+                showArrows={props.showArrows ?? true}
+                swipeDistance={props.swipeDistance ?? 30}
+                next={next}
+                prev={prev}
+            />
             {showThumb && (
-                <Slider>
-                    {props.items.map((img, id) => (
-                        <Thumbnail
-                            key={id}
-                            image={img}
-                            active={id == sel}
-                            onClick={() => setSel(id)}
-                        />
-                    ))}
-                </Slider>
+                <Slider items={props.items} sel={sel} setSel={setSel} />
             )}
         </div>
     )

@@ -10,8 +10,10 @@ export interface ImgGalleryProps {
     selected?: number,
     autoPlay?: boolean,
     slideInterval?: number,
+    swipeDistance?: number,
     infinite?: boolean,
     showControls?: boolean,
     showThumbnails?: boolean,
+    showArrows?: boolean,
     onClose?: () => void,
 }
