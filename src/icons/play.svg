@@ -1,0 +1,10 @@
+<svg viewBox="0 0 25 30" xmlns="http://www.w3.org/2000/svg">
+    <line x1="4" y1="4" x2="4" y2="26"
+          stroke="#eee" stroke-width="4" stroke-linecap="round" />
+    <line x1="4" y1="4" x2="21" y2="15"
+          stroke="#eee" stroke-width="4" stroke-linecap="round" />
+    <line x1="4" y1="26" x2="21" y2="15"
+          stroke="#eee" stroke-width="4" stroke-linecap="round" />
+
+    <polygon points="4,4 4,26 21,15" fill="#eee" />
+</svg>

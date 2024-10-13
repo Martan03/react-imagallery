@@ -8,6 +8,10 @@ export interface ImgGalleryItem {
 export interface ImgGalleryProps {
     items: ImgGalleryItem[],
     selected?: number,
+    autoPlay?: boolean,
+    slideInterval?: number,
+    infinite?: boolean,
+    showControls?: boolean,
     showThumbnails?: boolean,
     onClose?: () => void,
 }
