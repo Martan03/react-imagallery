@@ -11,11 +11,13 @@ const Thumbnail: React.FC<ThumbnailProps> = ({image, active, onClick}) => {
                 className={styles.fg}
                 src={image.thumbnail}
                 alt={image.thumbnailAlt ?? 'image thumbnail'}
+                loading="lazy"
             />
             <img
                 className={styles.bg}
                 src={image.thumbnail}
                 alt={`${image.thumbnailAlt ?? 'image thumbnail'} background`}
+                loading="lazy"
             />
         </div>
     )

@@ -1,4 +1,4 @@
-import { ImgGallery } from 'react-image-gallery';
+import Imagallery from 'react-imagallery';
 
 const createImage = (path: string) => {
     return {
@@ -18,7 +18,7 @@ function App() {
     ];
 
     return (
-        <ImgGallery items={items} />
+        <Imagallery items={items} />
     );
 }
 

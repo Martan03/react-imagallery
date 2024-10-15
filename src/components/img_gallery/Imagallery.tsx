@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import styles from "./ImgGallery.module.css";
-import { ImgGalleryProps } from "./ImgGallery.types";
+import styles from "./Imagallery.module.css";
+import { ImgGalleryProps } from "./Imagallery.types";
 import Slider from "../slider/Slider";
 import Controls from "../controls/Controls";
 import Original from "../original/Original";
@@ -41,10 +41,12 @@ const ImgGallery: React.FC<ImgGalleryProps> = (props) => {
 
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
-            if (e.key === 'ArrowRight' || e.key === ' ') {
+            if (e.key === 'ArrowRight') {
                 next();
             } else if (e.key === 'ArrowLeft') {
                 prev();
+            } else if (e.key === ' ') {
+                setPlaying(prev => !prev);
             }
         };
 

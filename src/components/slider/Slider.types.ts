@@ -1,4 +1,4 @@
-import { ImgGalleryItem } from "../img_gallery/ImgGallery.types";
+import { ImgGalleryItem } from "../img_gallery/Imagallery.types";
 
 export interface SliderProps {
     items: ImgGalleryItem[],

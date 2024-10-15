@@ -1,9 +1,25 @@
-# react-img-gallery
+# react-imagallery
+
+React Imagallery is react component for displaying image gallery.
 
 ## Table of Contents
-{{ mdcon }}
+- [Installation](#installation)
+- [Example](#example)
+- [Features](#features)
+- [Props](#props)
+- [Links](#links)
 
 ## Installation
+
+Imagallery can be installed using npm (with React 16.0.0 or later):
+```bash
+npm i react-imagallery
+```
+
+## Example
+
+You can see basic example of displaying images
+[here](https://github.com/Martan03/react-imagallery/tree/master/example).
 
 ## Features
 - Fullscreen support
@@ -33,5 +49,5 @@
 ## Links
 
 - **Author:** [Martan03](https://github.com/Martan03)
-- **GitHub repository:** [react-img-gallery](https://github.com/Martan03/react-img-gallery)
+- **GitHub repository:** [react-imagallery](https://github.com/Martan03/react-imagallery)
 - **Author website:** [martan03.github.io](https://martan03.github.io)
