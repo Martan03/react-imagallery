@@ -2,21 +2,26 @@
 
 React Imagallery is react component for displaying image gallery.
 
+![imagallery](assets/imagallery.jpg)
+
 ## Table of Contents
-- [Installation](#installation)
-- [Example](#example)
+- [Getting started](#getting-started)
+    - [Installation](#installation)
+    - [Example](#example)
 - [Features](#features)
 - [Props](#props)
 - [Links](#links)
 
-## Installation
+## Getting started
+
+### Installation
 
 Imagallery can be installed using npm (with React 16.0.0 or later):
 ```bash
 npm i react-imagallery
 ```
 
-## Example
+### Example
 
 You can see basic example of displaying images
 [here](https://github.com/Martan03/react-imagallery/tree/master/example).
